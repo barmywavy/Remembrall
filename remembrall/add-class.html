@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Class</title>
+    <link rel="stylesheet" href="sty.css" />
+    <script defer src="scri.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <span class="logo-text">Remembrall</span>
+        </div>
+        <h1>➕ Add a New Class</h1>
+        <nav>
+            <a href="current-class.html">Today</a> |
+            <a href="all-classes.html">All Classes</a> |
+            <a href="add-class.html">Add Class</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="class-card">
+            <form id="add-class-form">
+                <label>Class Name
+                    <input type="text" id="class-name" placeholder="e.g. Physics" required />
+                </label>
+
+                <label>Day
+                    <select id="class-day" required>
+                        <option value="">Select Day</option>
+                        <option>Monday</option>
+                        <option>Tuesday</option>
+                        <option>Wednesday</option>
+                        <option>Thursday</option>
+                        <option>Friday</option>
+                        <option>Saturday</option>
+                        <option>Sunday</option>
+                    </select>
+                </label>
+
+                <label>Items to remember</label>
+                <div class="item-controls">
+                    <input type="text" id="item-input" placeholder="e.g. Lab coat, Calculator" />
+                    <button type="button" id="add-item-btn">Add</button>
+                </div>
+                <div id="item-chip-list" class="chips"></div>
+                <small class="muted">Tip: Press <strong>Enter</strong> or type a <strong>,</strong> to add items
+                    fast.</small>
+
+                <button type="submit">Save Class</button>
+                <p id="success-msg" class="success-msg" aria-live="polite"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ for students</p>
+    </footer>
+</body>
+
+</html>
